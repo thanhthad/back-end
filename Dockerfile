@@ -13,10 +13,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy file .war đã build từ stage trước
-COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.war demo.war
+COPY --from=build /app/target/query1-0.0.1-SNAPSHOT.war query1.war
 
 # Expose cổng 8080 cho bên ngoài truy cập
 EXPOSE 8080
 
 # Lệnh chạy ứng dụng Spring Boot
-ENTRYPOINT ["java", "-jar", "demo.war"]
+ENTRYPOINT ["java", "-jar", "query1.war"]

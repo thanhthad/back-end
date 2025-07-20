@@ -8,7 +8,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Stage 2: Run
-FROM openjdk:17-jdk-slim # Hoặc eclipse-temurin:17-jre-jammy
+FROM openjdk:17-jdk-slim 
 WORKDIR /app
 
 # Sửa dòng này để sao chép file JAR
